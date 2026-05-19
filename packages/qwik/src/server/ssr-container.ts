@@ -47,6 +47,7 @@ import {
   QScopedStyle,
   QSlot,
   QSlotParent,
+  QStatePrewarmAttr,
   QStyle,
   QTemplate,
   QUOTE,
@@ -395,6 +396,12 @@ class SSRContainer extends _SharedContainer implements ISSRContainer {
     containerAttributes[QLocaleAttr] = this.$locale$;
     containerAttributes[QManifestHashAttr] = this.resolvedManifest.manifest.manifestHash;
     containerAttributes[QInstanceAttr] = this.$instanceHash$;
+    const statePrewarm = this.renderOptions.statePrewarm;
+    if (typeof statePrewarm === 'number') {
+      containerAttributes[QStatePrewarmAttr] = String(statePrewarm);
+    } else {
+      delete containerAttributes[QStatePrewarmAttr];
+    }
 
     this.$serverData$.containerAttributes = containerAttributes;
 
