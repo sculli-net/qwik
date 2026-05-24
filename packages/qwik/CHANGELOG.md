@@ -1,5 +1,28 @@
 # @qwik.dev/core
 
+## 2.0.0-beta.36
+
+### Minor Changes
+
+- ✨ make `usePreventNavigate$` and `request.rewrite()` stable by removing their experimental feature flags. (by [@Varixo](https://github.com/Varixo) in [#8631](https://github.com/QwikDev/qwik/pull/8631))
+
+### Patch Changes
+
+- 🐞🩹 prevent Qwik Vite virtual JSX modules from emitting sourcemaps that point to missing files. (by [@Varixo](https://github.com/Varixo) in [#8629](https://github.com/QwikDev/qwik/pull/8629))
+
+- 🐞🩹 expose `getClientManifest` from the `@qwik.dev/core` root package types. (by [@Varixo](https://github.com/Varixo) in [#8630](https://github.com/QwikDev/qwik/pull/8630))
+
+- 🐞🩹 stale DOM remaining after replacing content during a pending async render (by [@wmertens](https://github.com/wmertens) in [#8649](https://github.com/QwikDev/qwik/pull/8649))
+
+- 🐞🩹 we removed the vite preload helper from the built bundles. This reduces total bundle size of all bundles by about 3%. (by [@maiieul](https://github.com/maiieul) in [#8617](https://github.com/QwikDev/qwik/pull/8617))
+
+- 🐞🩹 escape URI-reserved vnode directive chars in serialized keys (by [@Varixo](https://github.com/Varixo) in [#8626](https://github.com/QwikDev/qwik/pull/8626))
+
+- 🐞🩹 ssr `q:template` projection handling so hidden slotted content can be restored correctly after component rerenders. (by [@Varixo](https://github.com/Varixo) in [#8661](https://github.com/QwikDev/qwik/pull/8661))
+
+- Updated dependencies [[`d124a92`](https://github.com/QwikDev/qwik/commit/d124a9207c45d1ce6cdb980d07d8ee6118083416)]:
+  - @qwik.dev/optimizer@2.1.0-beta.5
+
 ## 2.0.0-beta.35
 
 ### Minor Changes
